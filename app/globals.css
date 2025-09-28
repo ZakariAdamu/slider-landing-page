@@ -146,3 +146,13 @@
 .dark .custom-pagination .swiper-pagination-bullet:hover {
   @apply opacity-80 scale-110;
 }
+
+.right-radial {
+  background: #4b63d8;
+  background: radial-gradient(circle, rgb(114, 152, 233) 35%, rgba(213, 130, 228, 0.74) 61%);
+}
+
+.left-radial {
+  background: #4b63d8;
+  background: radial-gradient(circle, rgb(134, 165, 230) 35%, rgba(218, 150, 229, 0.74) 61%);
+}
