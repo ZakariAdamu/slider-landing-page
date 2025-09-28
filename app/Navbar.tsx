@@ -7,7 +7,6 @@ import MobileMenuBtn from "./MobileMenuBtn";
 import ThemeToggle from "./ThemeToggle";
 import { BsCardImage } from "react-icons/bs";
 import { HiVideoCamera } from "react-icons/hi2";
-import { TbSpaceOff } from "react-icons/tb";
 import { GiKitchenTap } from "react-icons/gi";
 import { PiPaintBrushHouseholdThin } from "react-icons/pi";
 import { FaBell, FaFolder, FaImage } from "react-icons/fa";
@@ -59,17 +58,17 @@ const Navbar = () => {
 	const pathname = usePathname();
 
 	return (
-		<header className="navbar w-full mt-2 h-[60px] lg:h-[72px] bg-transparent rounded-[70px] py-1 px-4 zlg:px-8 flex items-center justify-between">
+		<header className="navbar w-full mt-1 h-[60px] lg:h-[72px] bg-transparent rounded-[70px] py-1 px-4 zlg:px-8 flex items-center justify-between">
 			<nav className="flex items-center justify-between w-full">
-				{/* Logo */}
-				<Link
-					href="/"
-					className="flex items-center mr-4 h-8 lg:h-12 min-w-[45px]"
-				>
-					<Image src={Logo} alt="logo" width={45} height={45} priority />
-				</Link>
+				<div className="flex items-center justify-start gap-1 cursor-pointer">
+					{/* Logo */}
+					<Link
+						href="/"
+						className="flex items-center mr-1 h-8 lg:h-12 min-w-[45px]"
+					>
+						<Image src={Logo} alt="logo" width={45} height={45} priority />
+					</Link>
 
-				<div className="flex items-center gap-2">
 					<div className="left-radial flex items-center opacity-50 w-7 h-7 rounded-full p-2"></div>
 					<span className="text-xs text-gray-500">benevolenttimebot</span>
 					<BiChevronDown className="w-4 h-4 text-gray-500" />
@@ -77,7 +76,7 @@ const Navbar = () => {
 
 				{/* Desktop Nav Links (middle icon links) */}
 				<div className="hidden lg:flex flex-1 justify-center 2xl:mr-[-12px]">
-					<div className="flex gap-2 xl:gap-3 bg-gray-100 dark:bg-gray-900 rounded-xl items-center font-semibold text-xs p-1 py-1">
+					<div className="hidden lg:flex gap-2 xl:gap-3 bg-gray-100 dark:bg-gray-900 rounded-xl items-center font-semibold text-xs p-1 py-1">
 						{navLinks.map((link, idx) => (
 							<Link
 								key={idx}
@@ -114,21 +113,7 @@ const Navbar = () => {
 						</div>
 					</div>
 
-					{/* Mobile Nav Links */}
-					<div className="flex lg:hidden items-center gap-1">
-						{navLinks.slice(0, 3).map((link, idx) => (
-							<Link
-								key={idx}
-								href={link.href}
-								className="flex items-center p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-700"
-								aria-label={link.label}
-							>
-								{link.icon}
-							</Link>
-						))}
-					</div>
-
-					{/* Mobile Menu, theme toggler */}
+					{/* Mobile Menu and theme toggler */}
 					<div className="flex items-center gap-2">
 						<MobileMenuBtn />
 						<div className="flex items-center gap-1 ml-1 hover:bg-white dark:hover:bg-slate-700 rounded-lg p-2">
@@ -136,7 +121,7 @@ const Navbar = () => {
 						</div>
 						<ThemeToggle />
 					</div>
-					<div className="right-radial flex items-center w-7 h-7 rounded-full opacity-75 p-2"></div>
+					<div className="right-radial flex items-center w-7 h-7 rounded-full opacity-75 p-2 cursor-pointer"></div>
 				</div>
 			</nav>
 		</header>

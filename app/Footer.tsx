@@ -37,7 +37,7 @@ const iconBgColors = [
 	"bg-gradient-to-b from-cyan-500 from-65% to-cyan-100 to-100%",
 	"bg-black",
 	"bg-gradient-to-b from-gray-700 from-40% to-gray-300 to-100%",
-	"bg-transparent border-dashed border-2 border-gray-300 rounded-full",
+	"bg-transparent",
 ];
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -57,7 +57,7 @@ const iconMap: Record<string, React.ReactNode> = {
 		<Image
 			src={brain}
 			alt="Brain Icon"
-			className="w-10 h-10 border-dashed bg-transparent! rounded-full"
+			className="w-10 h-10 border-dashed bg-transparent! border-2 border-gray-400 rounded-full"
 		/>
 	),
 };
@@ -201,7 +201,7 @@ export default function Footer({ columns = defaultColumns }: FooterProps) {
 			<div className="max-w-screen mx-auto">
 				<div className="flex items-center justify-between mb-4">
 					<h3 className="font-normal">Generate</h3>
-					<div className="flex items-center">
+					<div className="flex items-center cursor-pointer gap-1">
 						<BiChevronDown className="w-5 h-5 text-blue-600" />
 						<span className="text-xs text-blue-700">Show all</span>
 					</div>
@@ -227,7 +227,7 @@ export default function Footer({ columns = defaultColumns }: FooterProps) {
 												<p className="text-sm font-medium truncate">
 													{item.title}
 												</p>
-												<p className="text-xs sm:text-sm text-gray-700 break-words">
+												<p className="text-xs sm:text-sm text-gray-700 dark:text-gray-400 break-words">
 													{item.text}
 												</p>
 											</div>
@@ -236,7 +236,7 @@ export default function Footer({ columns = defaultColumns }: FooterProps) {
 											<div className="flex-shrink-0 ml-2 sm:ml-4">
 												<Link
 													href={item.href}
-													className="inline-flex items-center px-3 sm:px-4 py-1.5 border border-transparent rounded-[20px] text-xs sm:text-[16px] font-medium bg-gray-100 hover:bg-gray-300 dark:text-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600"
+													className="inline-flex items-center px-3 sm:px-4 py-1.5 border border-transparent rounded-[20px] text-xs sm:text-[16px] font-medium bg-gray-100 hover:bg-gray-300 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600"
 													target="_blank"
 													rel="noopener noreferrer"
 													title={`Open ${item.title}`}
@@ -251,7 +251,7 @@ export default function Footer({ columns = defaultColumns }: FooterProps) {
 						</div>
 					))}
 				</div>
-				<div className="flex items-center justify-between mt-[28px]">
+				<div className="flex items-center justify-between mt-[18px]">
 					<h3 className="font-normal">Gallery</h3>
 					<div className="flex items-center gap-3">
 						<div className="flex items-center gap-1">

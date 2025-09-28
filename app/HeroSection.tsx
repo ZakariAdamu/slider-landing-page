@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -47,7 +46,7 @@ const HeroSection = () => {
 				</div>
 
 				{/* Right Image Carousel */}
-				<div className="lg:col-span-5 w-full pr-10 2xl:pr-0">
+				<div className="lg:col-span-5 w-full pr-10">
 					<div className="relative flex flex-col w-full items-center">
 						<Swiper
 							modules={[Navigation]}
@@ -76,10 +75,10 @@ const HeroSection = () => {
 							))}
 						</Swiper>
 						<div className="flex justify-end w-full mt-2 pr-8 h-[32px] gap-2">
-							<button className="custom-swiper-button-prev px-4 py-2 bg-gray-200 rounded hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">
+							<button className="custom-swiper-button-prev px-4 py-2 bg-gray-200 rounded hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 cursor-pointer">
 								<FaChevronLeft />
 							</button>
-							<button className="custom-swiper-button-next px-4 py-2 bg-gray-200 rounded hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600">
+							<button className="custom-swiper-button-next px-4 py-2 bg-gray-200 rounded hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 cursor-pointer">
 								<FaChevronRight />
 							</button>
 						</div>

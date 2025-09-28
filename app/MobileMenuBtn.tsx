@@ -2,14 +2,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
-import { BiMenu } from "react-icons/bi";
+import { HiMenuAlt4 } from "react-icons/hi";
 import { BsCardImage } from "react-icons/bs";
 import { FaFolder } from "react-icons/fa";
-import { FiMessageSquare } from "react-icons/fi";
 import { GiKitchenTap } from "react-icons/gi";
-import { GoCalendar, GoHome } from "react-icons/go";
 import { HiVideoCamera } from "react-icons/hi2";
-import { MdCreditCard, MdHomeFilled } from "react-icons/md";
+import { MdHomeFilled } from "react-icons/md";
 import { PiPaintBrushHouseholdThin } from "react-icons/pi";
 import { TbSpaceOff } from "react-icons/tb";
 
@@ -37,10 +35,10 @@ const MobileMenuBtn = () => {
 				className="lg:hidden cursor-pointer"
 				onClick={() => setShowMenu(!showMenu)}
 			>
-				<BiMenu className="w-[28px] h-[28px]" />
+				<HiMenuAlt4 className="w-[28px] h-[28px]" />
 			</div>
 			{showMenu && (
-				<div className="absolute top-[51px] -right-[32px] z-10 flex flex-col gap-[8px] p-[12px] rounded-[8px] bg-white shadow-md text-base-bold w-[190px] lg:hidden">
+				<div className="absolute top-[51px] -right-[152px] z-10 flex flex-col gap-[8px] p-[12px] rounded-[8px] bg-white dark:text-black shadow-md text-base-bold w-[290px] lg:hidden">
 					<Link
 						href="/"
 						className="flex items-center md:font-bold gap-[5px] 2xl:gap-[9px] hover:bg-[#fff] dark:hover:bg-slate-700 rounded-[10px] p-[10px]"
